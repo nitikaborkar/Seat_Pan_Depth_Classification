@@ -1,3 +1,7 @@
+[![Live Demo – Hugging Face Spaces](https://img.shields.io/badge/Live%20Demo-HuggingFace-blue?logo=huggingface)](https://huggingface.co/spaces/nitikaborkar/seat-depth-analyser)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 # Seat Depth Analyzer - Technical Documentation
 
 🪑✨ Seat Depth Analyzer
@@ -5,26 +9,43 @@ An AI-powered computer vision application that analyzes ergonomic seating condit
 
 🚀 Quick Start
 
-1. Install Dependencies
-    ```python
-    bashpip install streamlit opencv-python numpy torch torchvision segment-anything ultralytics mediapipe pillow
+##  Online (No Installation Needed)
+You can try the Seat Depth Analyzer instantly without installing anything:  
+🔗 **[Click here to open the live app on Hugging Face Spaces](https://huggingface.co/spaces/nitikaborkar/seat-depth-analyser)**
+
+Features of the online version:
+- Upload your own image or choose from sample images
+- Instantly see classification & clearance measurements
+- Runs fully in the browser via Hugging Face Spaces
+
+---
+
+## 💻 Quick Start – Local Installation
+
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/nitikaborkar/Seat_Pan_Depth_Classification.git
+    cd Seat_Pan_Depth_Classification
     ```
 
-2. Run Application
-    ```python
-    bashstreamlit run app.py
+2. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
     ```
-    Note: SAM model (sam_vit_b_01ec64.pth) is included in the submission
 
-3. Open in Browser
-    Navigate to: http://localhost:8501
+3. **Run the Application**
+    ```bash
+    streamlit run app.py
+    ```
+    *Note: The SAM model (`sam_vit_b_01ec64.pth`) is included in the submission.*
 
-4. Test the App
+4. **Open in Browser**
+    Navigate to: [http://localhost:8501](http://localhost:8501)
 
-    Upload a side-profile image of someone seated, or
-    Try the included sample images
-    Click "🔍 Analyze Seat Depth"
-
+5. **Test the App**
+    - Upload a side-profile image of someone seated, **or**
+    - Try the included sample images
+    - Click **"🔍 Analyze Seat Depth"**
 ## 🎯 Project Overview
 
 The Seat Depth Analyzer is an AI-powered computer vision application that analyzes ergonomic seating conditions from side-profile images. It classifies seat pan depth as **Optimal**, **Too Deep**, or **Too Short** based on the clearance between the seat front edge and the back of the user's knee.
